@@ -3,5 +3,29 @@
     <head></head>
     <body>
         <h1>Loudness</h1>
+        <table border=1 cellpadding=7>
+            <tr>
+                <th>show</th>
+                <th>date</th>
+                <th>hour</th>
+                <th>feed</th>
+                <th>loudness</th>
+                <th>LRA</th>
+                <th>peak</th>
+                <th>driver</th>
+            </tr>
+        {% for obj in object_list %}
+            <tr>
+                <td>{{ obj.show }}</td>
+                <td>{{ obj.date }}</td>
+				<td>{{ obj.hour }}</td>
+                <td>{{ obj.feed1 }}</td>
+                <td>{{ obj.Loudness }}</td>
+                <td>{{ obj.LRA }}</td>
+                <td>{{ obj.Peak }}</td>
+                <td>{{ obj.driver }}</td>
+            </tr>
+        {% endfor %}
+        </table>
     </body>
 </html>
